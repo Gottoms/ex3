@@ -21,9 +21,21 @@ h1 {
 
 }
 
+main {
+
+    background-color: green;
+
+}
+
 p {
 
     text-align: justify;
     color: rgb(0, 0, 66);
+
+}
+
+footer {
+
+    background-color: blanchedalmond;
 
 }
