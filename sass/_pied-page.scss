@@ -1,0 +1,92 @@
+/*
+mobile : 1 colonne
+tablette : 2 colonnes
+desktop : 4 colonnes
+*/
+
+
+#pied-page{
+    padding-top : 30px;
+    padding-bottom: 30px;
+    color : lighten($couleur_blanc,10%);
+    section{
+        display : flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    ul {
+
+        list-style-type: none;
+        margin:5px;
+        box-shadow: 5px 5px 2px rgba(0, 0, 0, .5);
+        padding: 20px 10px 20px 10px;
+        flex :1;
+        font-size: 1.2em;
+        text-align : center;
+        border: 3px solid lighten(black, 17%);
+
+        &:first-child {
+
+            border-radius: 20px 0 0 0;
+    
+        }
+
+        &:nth-child(2) {
+
+            border-radius: 0 20px 0 0;
+    
+        }
+
+        &:nth-child(3) {
+
+            border-radius: 0 0 0 20px;
+    
+        }
+
+        &:nth-child(4) {
+
+            border-radius: 0 0 20px 0;
+    
+        }
+
+        li {
+           padding : 3px;
+        }
+        
+    }
+}
+
+
+@media screen and (min-width: 500px)
+{
+#pied-page {
+    section{
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+    }
+    ul {
+            flex : 1 1 40%; // pour un wrap sur 2 colonnes
+            text-align : center;
+        }
+        
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #pied-page {
+        section {
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        ul {
+            flex : 1 1 25%; // on a plus de wrap et 4 colonnes
+        }
+    }
+}
